@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>B2BAgent.Server</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\B2BAgent.Server.HttpApi.Host\B2BAgent.Server.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="JwtToken\**" />
+    <EmbeddedResource Remove="JwtToken\**" />
+    <None Remove="JwtToken\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\HB.Dayu.Tools.Dapper\HB.Dayu.Tools.Dapper.csproj" />
+    <ProjectReference Include="..\B2BAgent.Server.Domain\B2BAgent.Server.Domain.csproj" />
+    <ProjectReference Include="..\B2BAgent.Server.Application.Contracts\B2BAgent.Server.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SourceLink.Copy.PdbFiles" Version="2.8.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Volo.Abp.Account.Application" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="3.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="B2BAgent.Server.Application.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

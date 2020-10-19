@@ -1,0 +1,642 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>B2BAgent.Server.Domain</name>
+    </assembly>
+    <members>
+        <member name="P:B2BAgent.Server.Domains.Client.Name">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Client.LastAccessTimeUTC">
+            <summary>
+            最后访问日期。utc时间
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Client.Schedules">
+            <summary>
+            执行计划
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Domains.ERP">
+            <summary>
+            erp
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.ERP.VersionString">
+            <summary>
+            erp版本号
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.ERP.ERPBrandId">
+            <summary>
+            erp品牌
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.ERP.ErpType">
+            <summary>
+            erp类型
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Domains.ERPBrand">
+            <summary>
+            erp品牌
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.ERPBrand.Name">
+            <summary>
+            erp名称
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.ERPBrand.Versions">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Domains.Merchant">
+            <summary>
+            经销商，商户
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Merchant.Name">
+            <summary>
+            经销商名称
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Merchant.ERPId">
+            <summary>
+            erp版本
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Merchant.PublicKey">
+            <summary>
+            公钥
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Merchant.PrivateKey">
+            <summary>
+            私钥
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Merchant.DataSourceType">
+            <summary>
+            数据来源，0队列 1文件 2数据库 3 API
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Domains.RELMerchantTenant">
+            <summary>
+            商户租户关系
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.RELMerchantTenant.ExternalMerchantId">
+            <summary>
+            外部商户Id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.Version">
+            <summary>
+            配置文件的版本，每次修改都增加一个版本。也就是保留历史记录
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.Content">
+            <summary>
+            配置文件的内容
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.BizType">
+            <summary>
+            业务类型 Stock
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.DurationType">
+            <summary>
+            周期类型 DayData
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.MerchantId">
+            <summary>
+            商户id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.ClientId">
+            <summary>
+            客户端Id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.Schedule">
+            <summary>
+            时间周期
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.ExtraData">
+            <summary>
+            额外参数
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.ReaderDataSourceId">
+            <summary>
+            来源数据源
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.Enabled">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.DataStartTime">
+            <summary>
+            数据开始时间
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.Plan.DataEndTime">
+            <summary>
+            数据结束时间
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.SyncLog.MerchantId">
+            <summary>
+            商户
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.SyncLog.SyncType">
+            <summary>
+            同步类型
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.SyncLog.ItemCount">
+            <summary>
+            记录条数
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Biz.CheckLog">
+            <summary>
+            规则检测结果
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.CheckLog.MerchantId">
+            <summary>
+            商户id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.CheckLog.ErrMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.CheckLog.ErrData">
+            <summary>
+            错误所在行原始数据
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.CheckLog.CheckTime">
+            <summary>
+            检查日期，什么时候检查的
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.CheckLog.IsSuccess">
+            <summary>
+            是否检查成功
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.CheckLog.Type">
+            <summary>
+            日志类型，R（rule），M（mapping）
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Biz.TenantDataSource">
+            <summary>
+            租户数据源
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantDataSource.Name">
+            <summary>
+            数据源名称
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantDataSource.Type">
+            <summary>
+            数据源类型
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantDataSource.JsonConfig">
+            <summary>
+            数据源json内容,包括连接信息，api信息。
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantDataSource.IsInputDataSource">
+            <summary>
+            是否是输入数据源，否则为输出数据源
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantDataSource.FormatorFullName">
+            <summary>
+            序列化器全名
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantDataSource.ThreadLimit">
+            <summary>
+            线程数
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Biz.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.Name">
+            <summary>
+            数据源名称
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.Type">
+            <summary>
+            数据源类型
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.JsonConfig">
+            <summary>
+            数据源json内容,包括连接信息，api信息。
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.MerchantId">
+            <summary>
+            商户
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.BizTypeCode">
+            <summary>
+            业务类型  进销存等来源于字典
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.DurationTypeCode">
+            <summary>
+            区间类型
+            日数据，月数据，年数据
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.IsInputDataSource">
+            <summary>
+            是否是输入数据源，否则为输出数据源
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.IsTenantDataSource">
+            <summary>
+            是否是租户使用的数据源，否为商户使用的数据源
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.ProcessorTypeName">
+            <summary>
+            处理器全名
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.FormatorFullName">
+            <summary>
+            序列化器全名
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.PackageRowLimit">
+            <summary>
+            打包行数
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.DataSource.ThreadLimit">
+            <summary>
+            线程数
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Biz.ExternalIDS">
+            <summary>
+            外部系统Id,一个租户可以有多个外部id
+            例如：外部商户id，外部用户id 等等
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.ExternalIDS.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.ExternalIDS.IdType">
+            <summary>
+            id类型
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.ExternalIDS.SourceId">
+            <summary>
+            本系统对象Id
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Biz.MappingConfig">
+            <summary>
+            Mapping
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.MappingConfig.PlanId">
+            <summary>
+            计划id，应该计划对应一个配置
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.MappingConfig.Content">
+            <summary>
+            配置内容
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.MappingConfig.ContentType">
+            <summary>
+            HBRowCollection 配置类型
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.MappingConfig.Pattern">
+            <summary>
+            识别模式 eg A*B.csv
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.MappingConfig.MerchantId">
+            <summary>
+            商户id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.MappingConfig.ClientId">
+            <summary>
+            客户端id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.MappingConfig.BizType">
+            <summary>
+            业务类型。例如 Stock
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.MappingConfig.DurationType">
+            <summary>
+            期间类型
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Biz.Package">
+            <summary>
+            数据包
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.MessageId">
+            <summary>
+            请求Id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.ClientId">
+            <summary>
+            客户端Id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.SendDate">
+            <summary>
+            数据包发送日期
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.PackageDataId">
+            <summary>
+            数据包内容,当数据包非法的时候就不保存
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.Sign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.IsSignPassed">
+            <summary>
+            签名是否通过验证
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.PackNumber">
+            <summary>
+            包序号
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.Package.TotalPackCount">
+            <summary>
+            总多少包
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.JobName">
+            <summary>
+            job名称。例如：某某公司周数据收集
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.BizType">
+            <summary>
+            业务数据类型
+            "医药周数据"，"医药月数据"，"汽车配件"，方便后台处理严格匹配字典
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.ExtData">
+            <summary>
+            额外数据
+            DataBegin，DataEnd，
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.Protocal">
+            <summary>
+            序列化的协议
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.EVFileId">
+            <summary>
+            文件id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.Sign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.CreationTime">
+            <summary>
+            “数据库记录” 的创建日期
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.TotalRowCount">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.PackageData.RowCount">
+            <summary>
+            当前包条数
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.RuleConfig.ContentType">
+            <summary>
+            HBRowCollection 
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.RuleConfig.Pattern">
+            <summary>
+            识别模式 eg A*B.csv
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Biz.StandardStruct">
+            <summary>
+            标准结构
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.StandardStruct.Name">
+            <summary>
+            标准结构名称
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.StandardStruct.DataType">
+            <summary>
+            数据类型类型，文件？数据库？
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.StandardStruct.JsonConfig">
+            <summary>
+            json配置。
+            类型为文件时，配置标准文件名
+            类型为数据库时候，配置标准字段
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.StandardStruct.BizTypeCode">
+            <summary>
+            业务类型  进销存等来源于字典
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.StandardStruct.DurationTypeCode">
+            <summary>
+            区间类型
+            日数据，月数据，年数据
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.StandardStruct.TenantConfigId">
+            <summary>
+            租户配置。一个租户配置包含多个标准结构
+            </summary>
+        </member>
+        <member name="T:B2BAgent.Server.Biz.TenantConfig">
+            <summary>
+            租户配置
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantConfig.InputDataSourceId">
+            <summary>
+            数据来源
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantConfig.OutputDataSourceId">
+            <summary>
+            数据清洗后的输出目标
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantConfig.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Biz.TenantConfig.StandardStructs">
+            <summary>
+            一个租户对应多个标准结构
+            </summary>
+        </member>
+        <member name="M:B2BAgent.Server.IRepository.IDataSourceRepository.GetTenantInDataSource(System.Nullable{System.Guid})">
+            <summary>
+            获取输入的Tenant数据源
+            </summary>
+            <param name="tenantId">null 表示所有数据源</param>
+            <returns></returns>
+        </member>
+        <member name="P:EV.Domain.System.EVFile.OriginName">
+            <summary>
+            原始文件名
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.EVFile.Ext">
+            <summary>
+            扩展名，不带点
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.EVFile.FilePath">
+            <summary>
+            保存路径
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.EVFile.GuidName">
+            <summary>
+            新文件名
+            </summary>
+        </member>
+        <member name="T:EV.Domain.System.SysDict">
+            <summary>
+            系统字典类型
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.DisplayOrder">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.SysDictItems">
+            <summary>
+            字典条目
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="T:EV.Domain.System.SysDictItem">
+            <summary>
+            系统字典条目
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDictItem.SysDictId">
+            <summary>
+            所属字典Id
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDictItem.SysDict">
+            <summary>
+            所属字典对象
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDictItem.DisplayOrder">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDictItem.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>B2BAgent.Server.Application</name>
+    </assembly>
+    <members>
+        <member name="T:B2BAgent.Server.ERPBrandAppService">
+            <summary>
+            ERP品牌服务
+            </summary>
+        </member>
+        <member name="M:B2BAgent.Server.ERPBrandAppService.CreateAsync(B2BAgent.Server.Biz.Dtos.ERPBrandCreateDto)">
+            <summary>
+            创建ERP品牌
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:B2BAgent.Server.ERPBrandAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除ERP品牌
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:B2BAgent.Server.ERPBrandAppService.GetAsync(System.Guid)">
+            <summary>
+            获取ERP品牌
+            </summary>
+            <param name="id">对象id</param>
+            <returns></returns>
+        </member>
+        <member name="M:B2BAgent.Server.ERPBrandAppService.UpdateAsync(System.Guid,B2BAgent.Server.Biz.Dtos.ERPBrandDto)">
+            <summary>
+            更新ERP品牌
+            </summary>
+            <param name="id">对象id</param>
+            <param name="input">erp品牌信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:EV.Application.System.SysDictItems.SysDictItemAppService">
+            <summary>
+            系统字典条目
+            </summary>
+        </member>
+        <member name="M:EV.Application.System.SysDictItems.SysDictItemAppService.GetListByTypeCodeAsync(B2BAgent.Server.System.Dtos.GetListByTypeCodeInput)">
+            <summary>
+            根据类型代码查询
+            </summary>
+            <param name="input">过滤条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDictItems.SysDictItemAppService.GetListAsync(B2BAgent.Server.Biz.Dtos.EVPagedAndSortedResultRequestDto)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="input">分页条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDictItems.SysDictItemAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除字典条目
+            </summary>
+            <param name="id">字典条目Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDictItems.SysDictItemAppService.UpdateAsync(System.Guid,B2BAgent.Server.System.Dtos.SysDictItemCreateOrUpdateDto)">
+            <summary>
+            更新字典条目
+            </summary>
+            <param name="id">字典条目id</param>
+            <param name="input">字典条目内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDictItems.SysDictItemAppService.CreateAsync(B2BAgent.Server.System.Dtos.SysDictItemCreateOrUpdateDto)">
+            <summary>
+            创建字典条目
+            </summary>
+            <param name="input">字典条目对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDictItems.SysDictItemAppService.GetAsync(System.Guid)">
+            <summary>
+            获取字典条目
+            </summary>
+            <param name="id">字典条目Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:EV.Application.System.SysDicts.SysDictAppService">
+            <summary>
+            系统字典
+            </summary>
+        </member>
+        <member name="M:EV.Application.System.SysDicts.SysDictAppService.GetAsync(System.Guid)">
+            <summary>
+            通过Id获取字典
+            </summary>
+            <param name="id">字典Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDicts.SysDictAppService.CreateAsync(B2BAgent.Server.System.Dtos.SysDictCreateOrUpdateDto)">
+            <summary>
+            创建字典
+            </summary>
+            <param name="input">字典创建对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDicts.SysDictAppService.GetListAsync(B2BAgent.Server.Biz.Dtos.EVPagedAndSortedResultRequestDto)">
+            <summary>
+            获取字典列表
+            </summary>
+            <param name="input">字典列表获取输入对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDicts.SysDictAppService.UpdateAsync(System.Guid,B2BAgent.Server.System.Dtos.SysDictCreateOrUpdateDto)">
+            <summary>
+            更新字典信息
+            </summary>
+            <param name="id">字典id</param>
+            <param name="input">字典更新输入对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:EV.Application.System.SysDicts.SysDictAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除字典
+            </summary>
+            <param name="id">字典id</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

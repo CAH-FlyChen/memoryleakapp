@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>B2BAgent.Server.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:B2BAgent.Server.Domains.ERPBrand">
+            <summary>
+            erp品牌
+            </summary>
+        </member>
+        <member name="P:B2BAgent.Server.Domains.ERPBrand.Name">
+            <summary>
+            erp名称
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.EVFile.OriginName">
+            <summary>
+            原始文件名
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.EVFile.Ext">
+            <summary>
+            扩展名，不带点
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.EVFile.FilePath">
+            <summary>
+            保存路径
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.EVFile.GuidName">
+            <summary>
+            新文件名
+            </summary>
+        </member>
+        <member name="T:EV.Domain.System.SysDict">
+            <summary>
+            系统字典类型
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.DisplayOrder">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.SysDictItems">
+            <summary>
+            字典条目
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDict.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="T:EV.Domain.System.SysDictItem">
+            <summary>
+            系统字典条目
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDictItem.SysDictId">
+            <summary>
+            所属字典Id
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDictItem.SysDict">
+            <summary>
+            所属字典对象
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDictItem.DisplayOrder">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:EV.Domain.System.SysDictItem.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+    </members>
+</doc>

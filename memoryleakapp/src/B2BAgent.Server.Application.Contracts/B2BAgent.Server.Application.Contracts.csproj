@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>B2BAgent.Server</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\B2BAgent.Server.HttpApi.Host\B2BAgent.Server.Application.Contracts.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\B2BAgent.Server.Domain.Shared\B2BAgent.Server.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Volo.Abp.Account.Application.Contracts" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application.Contracts" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application.Contracts" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application.Contracts" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application.Contracts" Version="3.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Biz\HeartBeat\" />
+  </ItemGroup>
+
+</Project>

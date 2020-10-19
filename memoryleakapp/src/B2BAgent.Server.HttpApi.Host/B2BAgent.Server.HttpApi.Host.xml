@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>B2BAgent.Server.HttpApi.Host</name>
+    </assembly>
+    <members>
+        <member name="M:B2BAgent.Server.MySocketMessageHandler.HandleAsync(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            最早进入的connected
+            </summary>
+            <param name="context"></param>
+            <param name="socket"></param>
+            <returns></returns>
+        </member>
+        <member name="T:B2BAgent.Server.Controllers.HomeController">
+            <summary>
+            页面服务
+            </summary>
+        </member>
+    </members>
+</doc>

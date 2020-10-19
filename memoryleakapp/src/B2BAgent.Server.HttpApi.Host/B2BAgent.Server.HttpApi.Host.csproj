@@ -1,0 +1,149 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>B2BAgent.Server</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>B2BAgent.Server-4681b4fd-151f-4221-84a4-929d86723e4c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>B2BAgent.Server.HttpApi.Host.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>B2BAgent.Server.HttpApi.Host.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LogDashboard" Version="1.4.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
+    <PackageReference Include="SourceLink.Copy.PdbFiles" Version="2.8.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <!--<PackageReference Include="SourceLink.Copy.PdbFiles" Version="2.8.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>-->
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="3.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\HB.Dayu.Common.Contract\HB.Dayu.Common.Contract.csproj" />
+    <ProjectReference Include="..\..\..\HB.Dayu.Formators\HB.Dayu.Formators.csproj" />
+    <ProjectReference Include="..\..\..\HB.Dayu.ICommand\HB.Dayu.ICommand.csproj" />
+    <ProjectReference Include="..\B2BAgent.Server.Application\B2BAgent.Server.Application.csproj" />
+    <ProjectReference Include="..\B2BAgent.Server.EntityFrameworkCore.DbMigrations\B2BAgent.Server.EntityFrameworkCore.DbMigrations.csproj" />
+    <ProjectReference Include="..\B2BAgent.Server.HttpApi\B2BAgent.Server.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\APIUI.Scripts.swagger.js" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <None Include="wwwroot\APIUI.Scripts.swagger.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\swagger\ace-editor\ace.js" />
+    <None Include="wwwroot\swagger\ace-editor\mode-json.js" />
+    <None Include="wwwroot\swagger\ace-editor\snippets\json.js" />
+    <None Include="wwwroot\swagger\ace-editor\theme-eclipse.js" />
+    <None Include="wwwroot\swagger\ace-editor\worker-json.js" />
+    <None Include="wwwroot\swagger\ace\ace.min.js" />
+    <None Include="wwwroot\swagger\ace\bootstrap.min.js" />
+    <None Include="wwwroot\swagger\bootstrap-tabx\js\bootstrap-tabs-x.min.js" />
+    <None Include="wwwroot\swagger\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\swagger\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\swagger\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\swagger\bootstrap\js\npm.js" />
+    <None Include="wwwroot\swagger\cdao\swaggerbootstrapui.js" />
+    <None Include="wwwroot\swagger\ext\i18n.js" />
+    <None Include="wwwroot\swagger\ext\sbuadmin.js" />
+    <None Include="wwwroot\swagger\ext\treetable-bak.js" />
+    <None Include="wwwroot\swagger\ext\treetable.js" />
+    <None Include="wwwroot\swagger\highlight\highlight.js" />
+    <None Include="wwwroot\swagger\highlight\highlight.pack.js" />
+    <None Include="wwwroot\swagger\iconfont\iconfont.js" />
+    <None Include="wwwroot\swagger\iconfont\iconfont.svg" />
+    <None Include="wwwroot\swagger\jquery\async.min.js" />
+    <None Include="wwwroot\swagger\jquery\axios.min.js" />
+    <None Include="wwwroot\swagger\jquery\clipboard\clipboard.min.js" />
+    <None Include="wwwroot\swagger\jquery\jquery-1.9.1.min.js" />
+    <None Include="wwwroot\swagger\jquery\marked.js" />
+    <None Include="wwwroot\swagger\jquery\md5.min.js" />
+    <None Include="wwwroot\swagger\jquery\showdown.min.js" />
+    <None Include="wwwroot\swagger\jquery\showdown.min.js.map" />
+    <None Include="wwwroot\swagger\jquery\template-web.js" />
+    <None Include="wwwroot\swagger\layer3.0.3\layer.js" />
+    <None Include="wwwroot\swagger\layer3.0.3\mobile\layer.js" />
+    <None Include="wwwroot\swagger\layui\font\iconfont.svg" />
+    <None Include="wwwroot\swagger\layui\layui.js" />
+    <None Include="wwwroot\swagger\layui\lay\modules\element.js" />
+    <None Include="wwwroot\swagger\layui\lay\modules\form.js" />
+    <None Include="wwwroot\swagger\layui\lay\modules\layer.js" />
+    <None Include="wwwroot\swagger\layui\lay\modules\laypage.js" />
+    <None Include="wwwroot\swagger\layui\lay\modules\laytpl.js" />
+    <None Include="wwwroot\swagger\layui\lay\modules\table.js" />
+    <None Include="wwwroot\swagger\layui\lay\modules\util.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="B2BAgent.Server.Application.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Volo.Abp.Account.HttpApi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Volo.Abp.FeatureManagement.Application.Contracts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Volo.Abp.Identity.Application.Contracts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Volo.Abp.TenantManagement.Application.Contracts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="wwwroot\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+
+  <!--<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(SolutionDir)src\B2BAgent.Server.Application\B2BAgent.Server.Application.xml $(TargetDir)&#xD;&#xA;copy $(SolutionDir)src\B2BAgent.Server.Domain\B2BAgent.Server.Domain.xml $(TargetDir)" />
+  </Target>-->
+
+</Project>
